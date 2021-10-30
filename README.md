@@ -1,6 +1,7 @@
 # Steps
 
+1. `git clone git@github.com:jakubrohleder/new-dawn.git`
 1. Install zsh
-2. Install zplug
-3. Make zsh default
-4. Run `make`
+1. Install zplug
+1. Make zsh default
+1. Run `make -C new-dawn`
