@@ -17,6 +17,9 @@ setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry
 setopt HIST_VERIFY            # Don't execute immediately upon history expansion.
 setopt HIST_BEEP              # Beep when accessing nonexistent history.
 
+# Add $HOME/bin to path
+export PATH=$PATH:$HOME/bin
+
 # Search with up/down
 bindkey "^[OA" history-substring-search-up
 bindkey "^[[A" history-substring-search-up
@@ -32,8 +35,6 @@ bindkey "^[[1;3C" end-of-line
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
